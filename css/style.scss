@@ -1,0 +1,192 @@
+//Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+
+//Colors
+$white: #fff;
+$dark-blue: #1C3763;
+$red: #BB3B56;
+$royal-blue: #3862AF;
+$brown: #392A40;
+$dark-red: #6C324F;
+
+html, 
+body {
+    height: 100%;
+}
+
+html {
+    overflow: auto;
+}
+
+
+* {
+	font-family: 'Titillium Web', sans-serif;
+	padding: 0;
+	margin:  0;
+}
+
+h1 {
+	font-family: 'Noto Serif', serif;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.bg-cover {
+    background: linear-gradient(120deg, $dark-blue, $red);
+    height: auto;
+    min-height: 100%;
+}
+
+.navbar {
+    height: 135px;
+    justify-content: space-between;
+
+    &-toggler {
+        i {
+            color: $white;
+            font-size: 22px;
+        }
+    
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.logo {
+    width: 55px;
+    padding-right: 10px;
+}
+
+.container-wrapper {
+    padding: 0 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+
+    &-blue {
+        background: $dark-blue;
+        padding: 14px 0;
+        border:  30px;
+    }
+
+    &-start {
+        width: 100%;
+
+        &:hover {
+            background: $red;
+            border-color: $red;
+        }
+    }
+
+    &-close {
+        font-size: 22px;
+    }
+
+    &:hover {
+        box-shadow: 0 20px 38px #00000026;
+        color: $white;
+    }
+
+    .fa-arrow {
+        margin-left: 3px;
+    }
+}
+
+.offcanvas {
+    background: linear-gradient(180deg, $dark-red, $brown);
+
+    &-header {
+        padding: 3.5rem 2.5rem 1rem;
+        justify-content: end;
+    }
+    &-body {
+        justify-content: end;
+        padding: 2rem;
+    }
+    &-end {
+        width: 100%;
+        border-left: 0;
+    }
+}
+
+.link {
+    text-align: right;
+    margin-bottom: 3rem;
+
+    &-item {
+        font-size: 12px;
+    }
+}
+
+.form-group {
+	padding: 10px 0;
+}
+
+
+input {
+    border: $white 2px solid;
+    border-radius: 30px !important;
+    padding: 10px 20px !important;
+    width: 100%;
+    outline: none;
+    color: $white;
+    background: transparent;
+    letter-spacing: 1px;
+
+    &::placeholder {
+        color: $white;
+        opacity: 1;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    &:-ms-input-placeholder,
+    &::-ms-input-placeholder {
+        color: $white;
+    }
+
+    &:active,
+    &:focus {
+        background: #ffffff12;
+    }
+}
+
+@media (min-width: 576px) {
+    .btn-start {
+        width: 215px;
+    }
+
+    .logo {
+        width: 75px;
+    }
+
+    .offcanvas {
+        background: transparent;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 42px;         
+    }
+
+    .bg-cover {
+        background: url(../images/user.png), linear-gradient(120deg, $dark-blue, $red);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        min-height: 100%;
+    }
+
+    .container-wrapper {
+        padding: 0 70px;
+    }
+}
